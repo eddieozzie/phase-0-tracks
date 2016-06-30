@@ -1,0 +1,22 @@
+section#contact-info p {
+  font-size: .8em;
+}
+
+.job {
+  background: #e9e5dc;
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.accomplishments {
+  font-size: .8em;
+}
+
+#contact-email:hover {
+  color: blue;
+}
+
+ul li:first-child{
+  color: blue;
+}
