@@ -1,3 +1,24 @@
+body {
+  max-width: 100%;
+  margin: 0;
+}
+
+#external-links {
+  display: inline-block;
+  min-width: 5%;
+  padding: 15px;
+  vertical-align: top;
+  width: 20%;
+}
+
+main {
+  display: inline-block;
+  min-width: 20%;
+  padding: 15px;
+  vertical-align: top;
+  width:70%;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -15,7 +36,7 @@ cite {
 }
 
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
@@ -30,3 +51,20 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 200px) {
+  h1 {
+    font-size: 20px;
+  }
+  p, ol, blockquote {
+    font-size: 12px;
+  }
+}
+
+/*
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+*/
