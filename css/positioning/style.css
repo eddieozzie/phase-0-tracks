@@ -1,0 +1,31 @@
+.octupus-wrapper
+{
+	position:relative;
+
+}
+
+#octopus
+{
+	position: absolute;
+	margin-left: 800px; 
+	margin-top: 300px;
+	z-index: 1;
+
+}
+
+#hat 
+{
+	position: absolute;
+	margin-left: 770px;
+	margin-top: 250px;
+	z-index: 2;
+
+}
+
+#glasses
+{	
+	position: absolute;
+	margin-left: 850px;
+	margin-top: 400px;
+	z-index: 3;
+}
