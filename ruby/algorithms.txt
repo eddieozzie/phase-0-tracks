@@ -1,0 +1,26 @@
+HOW TO TAKE AN ELEVATOR 
+
+-Determine whether you want to travel up, down, or not move at all
+-If you do not want to move, do nothing - walk away and exit program
+-Scan the wall for a board containing two buttons stacked vertically
+-If you want to move up, press the upper of the two buttons
+-If you want to move down, press the lower of the two buttons
+-Wait patientily for one of the doors in front of you to open
+-When a door does open, rush towards it, and take at least two steps into it
+-Greet the other elevator goers, if there are any
+-Determine which floor you want to move to, using a directory or map
+-Again, look for a panel of buttons - if not found or covered, exit elevator and take stairs
+-Match the idea of the intended floor level to the numeric representation on the set of buttons
+-If not found, step out of the elevator and reevaluate your intent
+-If found, exert a force away from your self onto the surface of the button, until a sound and/or light manifests
+-Step back from the panel and wait patiently until the door opens next
+-When it opens, first search the elevator for a marking of somekind (maybe a monitor above) that indicates the current floor number
+-If the number matches, step out of the open door and continue on your day
+-If the number doesn't match, wait on the elevator and move back 3 steps (in this set of instructions)
+
+HOW TO WALK
+
+-Assume a standing position - ensure your feet are flat on the floor and your legs are fully extended
+-Extend your right foot forward to a point that is comfortable and lean forward until the right foot comes to the ground
+-Lift your left left foot up and, using your right foot, push off the ground as you bring the left foot forward. 
+-Move back 2 steps in the algorithm and proceed until motivation is fulfilled or tired. 
