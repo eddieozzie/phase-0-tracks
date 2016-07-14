@@ -1,4 +1,41 @@
-body 
+section
 {
-	background: blue;
+  background:green; 
+}
+
+header {
+  display: block;
+  position: relative;
+}
+
+footer {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+ }
+ 
+ h1
+ {
+   font-family: Helvetica, sans-serif
+ }
+
+.column-1 {
+  width: 48%;
+  float: left;
+  height:100%;
+}
+
+.column-2 {
+  width: 48%;
+  float: right;
+  height:100%;
+}
+
+#github-mascot-pic
+{
+  display:inline-block;
+  margin: 50x auto; 
+  height: 30%;
+  width: 30%; 
 }
