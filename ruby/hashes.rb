@@ -1,5 +1,5 @@
 #prompt the user for the client's name, age, number of children, decor theme, etc.
-#conver the user input into appropriate data
+#convert the user input into appropriate data
 #load the data into a hash
 #print out the hash data
 #ask the user if they want to edit any keys
@@ -75,7 +75,6 @@ loop do
 	end
 
 end
-
 
 log_hash_info(hash)
 
