@@ -12,6 +12,7 @@ asia = {
 
 }
 
+
 north_america = {
 
 	usa: {
@@ -49,4 +50,18 @@ puts "The first state on the west coast: " + world[1][:usa][:west_coast][:states
 
 #print mexico's president
 puts "Mexico's president: " + world[1][:mexico][:president]
+
+
+def get_languages(planet, continent, country)
+
+	#return "Planet doesn't exist" if !planet
+	#return "Continent doesn't exist" if !planet.include? continent
+	return "Country doesn't exist" if continent.has_key? country
+	#return "Languages not registered" if !country.has_key? :languages
+	
+end
+
+puts asia.has_key? :china
+puts get_languages(world, asia, :china)
+
 
