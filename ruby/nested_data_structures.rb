@@ -1,6 +1,6 @@
 #create a geographic map software
 
-#create hashes for the containers, containing sub-hashes for the countries
+#create hashes for the continent containers, containing sub-hashes for the countries
 asia = {
 
 	china: {
@@ -30,10 +30,12 @@ north_america = {
 	},
 
 	mexico: {
+		languages:["spanish"],
 		president: "enrique peña nieto"
 	},
 
 	canada: {
+		languages:["english", "french"],
 		prime_minister: "justin trudeau"
 	}
 
@@ -51,17 +53,29 @@ puts "The first state on the west coast: " + world[1][:usa][:west_coast][:states
 #print mexico's president
 puts "Mexico's president: " + world[1][:mexico][:president]
 
+#this is a specific getter I removed in favor of a general attribute one
+=begin
+	def get_languages(planet, continent, country)
 
-def get_languages(planet, continent, country)
+		return "Planet doesn't exist" if !planet
+		return "Continent doesn't exist" if !planet.include? continent
+		return "Country doesn't exist" if !continent.has_key? (country.to_sym)
+		return "Languages not registered" if !continent[country].has_key? :languages
 
-	#return "Planet doesn't exist" if !planet
-	#return "Continent doesn't exist" if !planet.include? continent
-	return "Country doesn't exist" if continent.has_key? country
-	#return "Languages not registered" if !country.has_key? :languages
-	
+		return "languages: " + continent[country][:languages].join(", ")	
+	end
+=end
+
+def get_attribute(planet, continent, country, attribute)
+
+	return "Planet doesn't exist" if !planet
+	return "Continent doesn't exist" if !planet.include? continent
+	return "Country doesn't exist" if !continent.has_key? (country.to_sym)
+	return "#{attribute} not registered" if !continent[country].has_key? attribute.to_sym
+
+	return "#{attribute}: " + continent[country][attribute.to_sym].join(", ")	
 end
 
-puts asia.has_key? :china
-puts get_languages(world, asia, :china)
-
+#puts get_languages(world, asia, :china)
+puts get_attribute(world, asia, :china, :languages)
 
