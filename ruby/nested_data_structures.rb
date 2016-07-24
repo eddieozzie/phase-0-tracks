@@ -68,14 +68,21 @@ puts "Mexico's president: " + world[1][:mexico][:president]
 
 def get_attribute(planet, continent, country, attribute)
 
+	#exits method if any argument is not initialized in expected scope
+	return check_attributes(planet, continent, country, attribute) if check_attributes(planet, continent, country, attribute)
+
+	#return the country's attribute, joining multiple attributes with a comma 
+	return "#{attribute}: " + continent[country][attribute.to_sym].join(", ")	
+end
+
+def check_attributes(planet, continent, country, attribute)
 	return "Planet doesn't exist" if !planet
 	return "Continent doesn't exist" if !planet.include? continent
 	return "Country doesn't exist" if !continent.has_key? (country.to_sym)
 	return "#{attribute} not registered" if !continent[country].has_key? attribute.to_sym
-
-	return "#{attribute}: " + continent[country][attribute.to_sym].join(", ")	
 end
 
 #puts get_languages(world, asia, :china)
 puts get_attribute(world, asia, :china, :languages)
+#puts get_attribute(world, asia, :china, :schools)
 
