@@ -4,12 +4,12 @@ class Santa
 	attr_accessor :gender, :name
 
 	def initialize(name, gender, ethnicity)
-		puts "Initializing Santa instance..."
+		#initalizes santa instance
 		@name = name
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = Random.rand(140)
 	end
 	
 	def speak
@@ -42,8 +42,8 @@ names = ["Patria", "Ashley", "Reggie", "Camille","Sachiko", "Jeannetta"]
 
 
 
-#create 10 santa instances, each with random gender and ethnicity
-10.times do 
+#create 100 santa instances, each with random gender and ethnicity
+100.times do 
 	santas << Santa.new(names[Random.rand(names.length)],genders[Random.rand(genders.length)], ethnicities[Random.rand(ethnicities.length)])
 end
 
