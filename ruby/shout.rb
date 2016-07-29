@@ -1,3 +1,21 @@
+#Standalone Module
+=begin
+module Shout 
+	def self.yell_angrily
+		words + "!!!" + " :("
+	end
+
+	def self.yell_happily
+		words + "!!!" + " : )"
+	end
+end
+
+puts Shout.yell_happily("I won")
+puts Shout.yell_angrily("I lost")
+=end
+
+
+#Mixin Module
 module Shout
 
 	def yell_angrily(words)
