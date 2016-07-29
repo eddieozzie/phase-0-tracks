@@ -1,14 +1,27 @@
 module Shout
 
-	def self.yell_angrily(words)
+	def yell_angrily(words)
 	    words + "!!!" + " :("
 	end
 
-	def self.yell_happily(words)
+	def yell_happily(words)
 		words + "!!!" + " : )"
 	end
 
 end
 
-Shout.yell_happily("I won")
-Shout.yell_angrily("I lost")
+class Grandpa
+	include Shout
+end
+
+class Pelican 
+	include Shout
+end
+
+joe = Grandpa.new()
+puts joe.yell_angrily("Get off my lawn")
+puts joe.yell_happily("I just won the lottery")
+
+squeal = Pelican.new()
+puts squeal.yell_angrily("He stole my fish")
+puts squeal.yell_happily("I just caught some tuna")
