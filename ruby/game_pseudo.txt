@@ -1,0 +1,12 @@
+#ask player #1 for a phrase
+
+#assign player 2 a fixed number of guesses (equal to 2x length of phrase)
+#create a "board" for player 2
+
+#ask player 2 for his first guess	
+	#if the character is included in the phrase, fill the board with the matching characters
+		#deduct one guess
+		#if board is complete, player 2 wins - end game
+	#if the character is not included in the phrase, just deduct one guess from player 2 budget
+
+#continue asking player 2 for guesses until either he wins or runs out of guesses
