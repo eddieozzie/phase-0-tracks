@@ -53,11 +53,11 @@ class Game
 
 	def make_guess(guess)
 		if check_guess(guess)
-			puts "Nice work! The letter #{guess} is here!"
+			puts "\nNice work! The letter #{guess} is here!"
 			fill_board(guess)
 
 		else
-			puts "Sorry, the letter #{guess} is not here!"
+			puts "\nSorry, the letter #{guess} is not here!"
 		end
 
 		@guess_count -= 1
@@ -88,18 +88,21 @@ class Game
   		char =~ /[[:alpha:]]/
 	end
 
+	def print_stats
+		puts won? ? "\nYou won!" : "\nYou lost!"
+		puts "Thanks for playing! The phrase was '#{@word.join}' and you had #{@guess_count} guesses remaining"
+	end
+
 end
 
-puts "Player 1, please enter your word: "
+print "Player 1, please enter your word: "
 game = Game.new(gets.chomp)
 
 until game.game_over? do
 	puts game.print_board
-	puts "Player 2, please enter your guess: "
+	print "Player 2, please enter your guess: "
 	game.make_guess(gets.chomp)
 end
 
-if game.won?
+game.print_stats
 
-
-puts "\nThanks for playing! The phrase was '#{game.word.join}' and you had #{game.guess_count} guesses remaining"
