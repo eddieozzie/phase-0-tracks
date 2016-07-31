@@ -46,7 +46,6 @@ class Game
 		end
 	end
 
-
 	def print_board
 		print @board.join("")
 	end
@@ -69,9 +68,6 @@ class Game
 		else
 			false
 		end
-	end
-
-	def update_board
 	end
 
 	def game_over?
