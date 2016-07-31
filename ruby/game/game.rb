@@ -48,6 +48,7 @@ class Game
 
 	def print_board
 		print @board.join("")
+		@board.join("")
 	end
 
 	def make_guess(guess)
@@ -90,7 +91,7 @@ class Game
 	end
 
 end
-
+=begin
 print "Player 1, please enter your word: "
 game = Game.new(gets.chomp)
 
@@ -101,4 +102,4 @@ until game.game_over? do
 end
 
 game.print_stats
-
+=end
