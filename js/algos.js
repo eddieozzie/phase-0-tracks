@@ -32,16 +32,34 @@ function findMatch(object1, object2)
 
 function generateWords(num_words)
 {
+
+	//create a container for the words
+	words = []
+
 	//create a list of valid characters
-	validCharacters = ("abcdefghijklmnopqrstuwxyz" . toUpperCase("abcdefghijklmnopqrstuwxyz")).split();
+	validCharacters = "abcdefghijklmnopqrstuwxyz".split("");
 
 	//repeat this generation for the number of words wanted
+	for(var i = 0; i < num_words; i++)
+	{
 		//create a container for the word
+		word = [];
+		
 		//generate a random length for the word
+		length = Math.floor((Math.random() * 10) + 1);
+
 		//looping once for each character, append a random character to the word
+		for(var j = 0; j < length; j++)
+		{
+			//append random character to word
+			word.push(validCharacters[Math.floor((Math.random() * 10))]);
+		}
+
+		words.push(word.join(""));
+	}
 
 
-
+	return words;
 
 }
 
@@ -54,3 +72,17 @@ console.log("The longest word in " + words2 + " is " + getLongest(words2));
 
 findMatch({name: "Steven", age: 55}, {name: "Tamir", age: 54}) ? console.log("Match!") : console.log("No match!");
 findMatch({name: "Steven", age: 55}, {name: "Tamir", age: 55}) ? console.log("Match!") : console.log("No match!");
+
+//repeat testing 10 times
+for(var i = 0; i < 10; i++)
+{
+	//generate an array of 10 words
+	var words = generateWords(10);
+	//print array of 10 words
+	console.log(words);
+	//print the longest word in the array of 10 words
+	console.log("Longest Word: " + getLongest(words));
+
+	//add padding
+	console.log("-------");
+}
