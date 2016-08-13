@@ -1,0 +1,9 @@
+SELECT * FROM states;
+
+UPDATE states SET name = "New York“ WHERE name = “NY”;
+
+SELECT cities.name, states.name, mayors.lastName, mayors.firstName FROM cities JOIN states ON cities.stateID = states.id JOIN mayors ON cities.mayorID = mayors.id;
+
+SELECT cities.name, states.name FROM cities JOIN states ON cities.stateID = states.id;
+
+DELETE FROM mayors WHERE lastName = “Bloomberg”;
