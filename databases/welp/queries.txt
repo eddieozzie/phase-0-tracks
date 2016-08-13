@@ -1,0 +1,6 @@
+SELECT * FROM reviews, businesses, users;
+
+SELECT reviews.stars, reviews.comment, businesses.name, users.firstName FROM reviews 
+JOIN businesses ON business_id = businesses.id JOIN users ON user_id = users.id;
+
+SELECT * FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE reviews.business_id = 1;
